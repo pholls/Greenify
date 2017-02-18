@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'rspec-rails'
   gem 'dotenv-rails'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
