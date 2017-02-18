@@ -1,5 +1,8 @@
-class User < ApplicationRecord
-    def self.update_or_create(auth)
+class User < ApplicationRecord  
+  has_many :badges_users
+  has_many :users, :through => :badges_user
+
+  def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
     user.attributes = {
       provider: auth[:provider],
