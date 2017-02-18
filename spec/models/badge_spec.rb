@@ -1,5 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Badge, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { is_expected.to have_many :users }
+  it { is_expected.to have_many :badges_users }
 end
