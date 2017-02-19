@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+badge = Badge.create(name: 'Chemical Spill', description: "This pin is used to warn people of any type of chemical spilled where it shouldn't be.", category: "Reporting", medal: "Bronze", image_id: 1)
