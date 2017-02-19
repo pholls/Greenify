@@ -3,6 +3,10 @@ class PinsController < ApplicationController
   def index
     @pins = Pin.all
   end
+ 
+  def show
+    @pin = Pin.find(params[:id])
+  end
 
   def new
     if current_user
@@ -29,9 +33,11 @@ class PinsController < ApplicationController
   end
 
   private
-  def set_pin
-     @pin = Pin.find(params[:id])
-   end
+  # def set_pin
+     
+  #    p '*********************'
+  #    p @pin
+  #  end
 
    def pin_params
      params.require(:pin).permit(:user_id, :description, :category, :lat, :lng)
