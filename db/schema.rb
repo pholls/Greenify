@@ -32,6 +32,17 @@ ActiveRecord::Schema.define(version: 20170219005015) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "pins", force: :cascade do |t|
+    t.string   "description"
+    t.string   "category"
+    t.decimal  "lat",         precision: 10, scale: 6
+    t.decimal  "lng",         precision: 10, scale: 6
+    t.integer  "user_id"
+    t.string   "image"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "provider"
     t.string   "uid"
