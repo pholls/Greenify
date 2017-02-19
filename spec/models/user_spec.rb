@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   it { is_expected.to have_many :badges }
   it { is_expected.to have_many :badges_users }
+  it { is_expected.to have_many :pins }
 
   it 'creates a user with oauth data' do
     auth = { provider: "google",
