@@ -1,0 +1,18 @@
+<%= form_for @pin do |f| %>
+  <%= f.label 'description' %>
+  <%= f.text_field :description %>
+
+  <%= f.label 'category' %>
+  <%= f.select :category, ['option1', 'option2', 'option3', 'option4', 'option5']%>
+
+  <% f.hidden_field :lat %>
+  <% f.hidden_field :lng %>
+  <% f.hidden_field :user_id, value: current_user.id %>
+    
+
+    t.string   "description"
+    t.string   "category"
+    t.decimal  "lat",         precision: 10, scale: 6
+    t.decimal  "lng",         precision: 10, scale: 6
+    t.integer  "user_id"
+    t.string   "image"
