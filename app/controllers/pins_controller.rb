@@ -18,19 +18,6 @@ class PinsController < ApplicationController
   def create
     if current_user
       @pin = Pin.new(pin_params)
-      puts '*' * 20
-      puts '*' * 20
-      puts '*' * 20
-      puts '*' * 20
-      puts '*' * 20
-      puts '*' * 20
-      puts '*' * 20
-      puts '*' * 20
-      puts '*' * 20
-      puts '*' * 20
-      puts '*' * 20
-      p @pin
-      p pin_params
       if @pin.save
         redirect_to root_path
       else
