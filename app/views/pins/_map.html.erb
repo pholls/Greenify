@@ -45,7 +45,7 @@ map.on('load', function(){
     type: "symbol",
     source: "pins",
     layout: {
-      "icon-image": "star-15",
+      "icon-image": iconSelector(),
       "icon-size": 1.0,
       "icon-allow-overlap": true
     }
@@ -122,4 +122,8 @@ map.on('mousemove', function (e) {
 });
 });
     /////
+
+  iconSelector = function(){
+    return "castle-15" if pin.category == "trash"
+  }
 </script>
