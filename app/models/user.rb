@@ -1,6 +1,6 @@
 class User < ApplicationRecord  
   has_many :badges_users
-  has_many :badges, :through => :badges_user
+  has_many :badges, :through => :badges_users
 
   def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
