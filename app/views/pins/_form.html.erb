@@ -3,7 +3,8 @@
   <%= f.text_field :description %>
 
   <%= f.label 'category' %>
-  <%= f.select :category, ['option1', 'option2', 'option3', 'option4', 'option5']%>
+  <%= f.select :category, ['bio waste', 'natural disaster', 'vandalism', 'trash', 'chemical spill'], {prompt: 'choose a category'} %>
+  <%= f.submit %>
 
   <% f.hidden_field :lat %>
   <% f.hidden_field :lng %>
