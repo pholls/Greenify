@@ -17,6 +17,16 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'rspec-rails'
   gem 'dotenv-rails'
+  gem 'shoulda-matchers'
+  gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'rails-controller-testing'
+  gem 'simplecov', :require => false
+  gem 'rack_session_access'
 end
 
 group :development do
