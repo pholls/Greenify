@@ -1,0 +1,5 @@
+<h1><%= @pin.category %></h1>
+<p><%= @pin.description %></p>
+<p>Created by <%= @pin.user.first_name %></p>
+<p><%= image_tag(@pin.image) if @pin.image %></p>
+<%= link_to 'Home', root_path %>
