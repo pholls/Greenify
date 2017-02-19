@@ -105,7 +105,7 @@ map.on('click', function (event) {
       var link = '/pins/new?longitude='+ event.lngLat.lng +   '&latitude='+ event.lngLat.lat
       var popup = new mapboxgl.Popup({offset:popupOffsets})
         .setLngLat(event.lngLat)
-        .setHTML("<h2>It's dat pin, oh shit whaddup!  ")
+        .setHTML("<a href='/pins/new'>Report This Mess</a>")
         .addTo(map);
       return;
      }
