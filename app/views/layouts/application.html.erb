@@ -22,7 +22,11 @@
   </head>
 
   <body>
-
+    <% if current_user %>
+      <%= link_to "Sign out", signout_path, class: "menu-link", id: "menu-signin" %>
+    <% else %>
+      <%= link_to "Sign in", "/auth/google_oauth2", class: "menu-link", id: "menu-signout" %>
+    <% end %>    
     <%= yield %>
   </body>
 </html>
