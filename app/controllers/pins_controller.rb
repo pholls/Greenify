@@ -28,7 +28,7 @@ class PinsController < ApplicationController
       if @pin.save
         redirect_to root_path
       else
-        redirect_to new_pin_path, notice: 'Pin was not created!'
+        redirect_to new_pins_path, notice: 'Pin was not created!'
       end
     else
       redirect_to root_path, notice: 'You have to be logged it to do that!!'
