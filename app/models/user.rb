@@ -12,7 +12,7 @@ class User < ApplicationRecord
       last_name: auth[:info][:last_name],
       token: auth[:credentials][:token],
       refresh_token: auth[:credentials][:refresh_token],
-      oauth_eSxpires_at: auth[:credentials][:expires_at]
+      oauth_expires_at: auth[:credentials][:expires_at]
     }
     user.save
     user
