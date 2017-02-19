@@ -15,13 +15,6 @@ class PinsController < ApplicationController
     end
   end
 
-  # def edit
-  #   if current_user
-  #   else
-  #     redirect_to root_path, notice: 'You have to be logged it to do that!!'
-  #   end
-  # end
-
   def create
     if current_user
       @pin = Pin.new(pin_params)
