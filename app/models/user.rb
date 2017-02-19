@@ -1,5 +1,8 @@
-class User < ApplicationRecord
-    def self.update_or_create(auth)
+class User < ApplicationRecord  
+  has_many :badges_users
+  has_many :badges, :through => :badges_users
+
+  def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
     user.attributes = {
       provider: auth[:provider],
@@ -9,7 +12,7 @@ class User < ApplicationRecord
       last_name: auth[:info][:last_name],
       token: auth[:credentials][:token],
       refresh_token: auth[:credentials][:refresh_token],
-      oauth_eSxpires_at: auth[:credentials][:expires_at]
+      oauth_expires_at: auth[:credentials][:expires_at]
     }
     user.save
     user
