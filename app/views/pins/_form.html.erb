@@ -7,12 +7,5 @@
 
   <% f.hidden_field :lat %>
   <% f.hidden_field :lng %>
-  <% f.hidden_field :user_id, value: current_user.id %>
-    
-
-    t.string   "description"
-    t.string   "category"
-    t.decimal  "lat",         precision: 10, scale: 6
-    t.decimal  "lng",         precision: 10, scale: 6
-    t.integer  "user_id"
-    t.string   "image"
+  <% f.hidden_field :user_id, value: current_user.id %> 
+<% end %>
