@@ -13,10 +13,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 # gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'dotenv-rails'
   gem 'shoulda-matchers', '~> 3.1'
 end
 
